@@ -3,12 +3,20 @@
 
   var WHATSAPP_NUMBER = '50760000000';
 
-  /* Header scroll */
+  /* Header: transparente en hero, sólido desde Empresa */
   var header = document.getElementById('header');
-  if (header) {
-    window.addEventListener('scroll', function () {
-      header.classList.toggle('header--scrolled', window.scrollY > 50);
-    }, { passive: true });
+  var empresaSection = document.getElementById('empresa');
+
+  function updateHeaderStyle() {
+    if (!header || !empresaSection) return;
+    var solid = empresaSection.getBoundingClientRect().top <= header.offsetHeight;
+    header.classList.toggle('header--solid', solid);
+  }
+
+  if (header && empresaSection) {
+    updateHeaderStyle();
+    window.addEventListener('scroll', updateHeaderStyle, { passive: true });
+    window.addEventListener('resize', updateHeaderStyle, { passive: true });
   }
 
   /* Mobile menu */
