@@ -1376,11 +1376,6 @@ a.product-card { color: inherit; }
     justify-content: center;
   }
 
-  .hero {
-    min-height: 55vh;
-    height: min(85vh, 600px);
-  }
-
   .hero__controls {
     bottom: 1.25rem;
     gap: 0.75rem;
@@ -1397,6 +1392,16 @@ a.product-card { color: inherit; }
     bottom: 16px;
     width: 52px;
     height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    max-height: none;
   }
 }
 
