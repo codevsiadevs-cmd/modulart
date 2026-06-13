@@ -22,17 +22,33 @@
   /* Mobile menu */
   var menuToggle = document.getElementById('menu-toggle');
   var mainNav = document.getElementById('main-nav');
+  var navBackdrop = document.getElementById('nav-backdrop');
+
+  function setMenuOpen(open) {
+    if (!mainNav || !menuToggle) return;
+    mainNav.classList.toggle('header__nav--open', open);
+    menuToggle.setAttribute('aria-expanded', open);
+    document.body.classList.toggle('nav-open', open);
+    if (navBackdrop) {
+      navBackdrop.classList.toggle('nav-backdrop--visible', open);
+      navBackdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
+    }
+  }
 
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', function () {
-      var open = mainNav.classList.toggle('header__nav--open');
-      menuToggle.setAttribute('aria-expanded', open);
+      setMenuOpen(!mainNav.classList.contains('header__nav--open'));
     });
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', function () {
+        setMenuOpen(false);
+      });
+    }
 
     mainNav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        mainNav.classList.remove('header__nav--open');
-        menuToggle.setAttribute('aria-expanded', 'false');
+        setMenuOpen(false);
       });
     });
   }

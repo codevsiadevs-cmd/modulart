@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="ModulArt — Ebanistería y diseño en madera en Ciudad de Panamá. Cocinas, closets, muebles a medida. Servicio en toda la ciudad y alrededores.">
   <meta name="robots" content="index, follow">
   <meta property="og:title" content="ModulArt | Diseño en Madera — Panamá">
@@ -11,8 +11,7 @@
   <meta property="og:locale" content="es_PA">
   <title>ModulArt | Diseño en Madera — Ebanistería en Panamá</title>
   <link rel="icon" href="/public/images/logo.png" type="image/png">
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1600&q=75&auto=format&fit=crop" fetchpriority="high">
+  <link rel="preload" as="image" href="/public/images/hero/slide-1.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/css/styles.css">
   <script type="application/ld+json">
   {
@@ -63,17 +62,15 @@
     </div>
   </header>
 
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
   <main id="contenido">
     <!-- Hero Slider -->
     <section class="hero" aria-label="Galería principal">
       <div class="hero__slider" id="hero-slider">
         <div class="hero__slide hero__slide--active">
           <img
-            src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1600&q=75&auto=format&fit=crop"
-            srcset="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=800&q=75&auto=format&fit=crop 800w,
-                    https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1200&q=75&auto=format&fit=crop 1200w,
-                    https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=1600&q=75&auto=format&fit=crop 1600w"
-            sizes="100vw"
+            src="/public/images/hero/slide-1.jpg"
             alt="Cocina integral moderna en madera"
             width="1600" height="750"
             fetchpriority="high"
@@ -81,10 +78,7 @@
         </div>
         <div class="hero__slide">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=75&auto=format&fit=crop"
-            srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=75&auto=format&fit=crop 800w,
-                    https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=75&auto=format&fit=crop 1600w"
-            sizes="100vw"
+            src="/public/images/hero/slide-2.jpg"
             alt="Interior con mobiliario de madera de diseño"
             width="1600" height="750"
             loading="lazy"
@@ -92,10 +86,7 @@
         </div>
         <div class="hero__slide">
           <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=75&auto=format&fit=crop"
-            srcset="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=75&auto=format&fit=crop 800w,
-                    https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=75&auto=format&fit=crop 1600w"
-            sizes="100vw"
+            src="/public/images/hero/slide-3.jpg"
             alt="Closet y almacenamiento modular en madera"
             width="1600" height="750"
             loading="lazy"
@@ -116,10 +107,7 @@
         <div class="section__grid section__grid--empresa">
           <div class="section__media">
             <img
-              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=75&auto=format&fit=crop"
-              srcset="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&q=75&auto=format&fit=crop 400w,
-                      https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=75&auto=format&fit=crop 600w"
-              sizes="(max-width: 768px) 100vw, 459px"
+              src="/public/images/empresa/taller.jpg"
               alt="Artesano trabajando madera en taller"
               width="459" height="585"
               loading="lazy"
@@ -136,7 +124,7 @@
         </div>
         <div class="section__secondary-img">
           <img
-            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&q=75&auto=format&fit=crop"
+            src="/public/images/empresa/maquinaria.jpg"
             alt="Taller de ebanistería con maquinaria profesional"
             width="567" height="494"
             loading="lazy"
@@ -220,7 +208,7 @@
 
         <div class="service-block">
           <div class="service-block__img">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=75&auto=format&fit=crop" alt="Diseño de interiores con madera" width="895" height="480" loading="lazy" decoding="async">
+            <img src="/public/images/servicios/diseno.jpg" alt="Diseño de interiores con madera" width="895" height="480" loading="lazy" decoding="async">
           </div>
           <div class="service-block__content">
             <div class="service-block__icon" aria-hidden="true">
@@ -234,7 +222,7 @@
 
         <div class="service-block service-block--reverse">
           <div class="service-block__img">
-            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=900&q=75&auto=format&fit=crop" alt="Proceso de fabricación en taller" width="895" height="480" loading="lazy" decoding="async">
+            <img src="/public/images/servicios/fabricacion.jpg" alt="Proceso de fabricación en taller" width="895" height="480" loading="lazy" decoding="async">
           </div>
           <div class="service-block__content">
             <div class="service-block__icon" aria-hidden="true">
@@ -248,7 +236,7 @@
 
         <div class="service-block">
           <div class="service-block__img">
-            <img src="https://images.unsplash.com/photo-1565183925561-82a908397144?w=900&q=75&auto=format&fit=crop" alt="Restauración de muebles de madera" width="895" height="480" loading="lazy" decoding="async">
+            <img src="/public/images/servicios/restauracion.jpg" alt="Restauración de muebles de madera" width="895" height="480" loading="lazy" decoding="async">
           </div>
           <div class="service-block__content">
             <div class="service-block__icon" aria-hidden="true">
@@ -266,16 +254,15 @@
     <section class="section section--contact" id="contacto">
       <div class="contact-grid">
         <div class="contact-map">
-          <iframe
-            title="Ubicación ModulArt en Ciudad de Panamá"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112037.31598865428!2d-79.597095!3d8.982379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9a284c672c3%3A0x6f176da952ed1bc7!2sCiudad%20de%20Panam%C3%A1!5e0!3m2!1ses!2spa!4v1718120000000!5m2!1ses!2spa"
-            width="100%"
-            height="100%"
-            style="border:0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen>
-          </iframe>
+          <div class="contact-map__frame">
+            <iframe
+              title="Ubicación ModulArt en Ciudad de Panamá"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112037.31598865428!2d-79.597095!3d8.982379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9a284c672c3%3A0x6f176da952ed1bc7!2sCiudad%20de%20Panam%C3%A1!5e0!3m2!1ses!2spa!4v1718120000000!5m2!1ses!2spa"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="contact-info-box">
             <p><a href="mailto:info@modulart.pa">info@modulart.pa</a></p>
             <p><a href="https://wa.me/50760000000">(+507) 6000-0000</a></p>
