@@ -180,8 +180,17 @@
       document.body.insertBefore(navBackdrop, document.body.querySelector('main'));
     }
 
+    function syncMobileNavOffset() {
+      if (!header) return;
+      document.documentElement.style.setProperty(
+        '--mobile-header-offset',
+        header.getBoundingClientRect().height + 'px'
+      );
+    }
+
     function setMenuOpen(open) {
       if (!mainNav || !menuToggle) return;
+      if (open) syncMobileNavOffset();
       mainNav.classList.toggle('header__nav--open', open);
       menuToggle.setAttribute('aria-expanded', open);
       document.body.classList.toggle('nav-open', open);
@@ -190,6 +199,9 @@
         navBackdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
       }
     }
+
+    syncMobileNavOffset();
+    window.addEventListener('resize', syncMobileNavOffset, { passive: true });
 
     if (menuToggle && mainNav) {
       menuToggle.addEventListener('click', function () {
