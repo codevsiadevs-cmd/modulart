@@ -1,4 +1,6 @@
 /* ModulArt — Landing Page */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 :root {
   --bg-dark: #0a0a0a;
   --bg-section: #181a1a;
@@ -11,6 +13,7 @@
   --border: rgba(255, 255, 255, 0.12);
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-heading: Georgia, "Times New Roman", serif;
+  --font-signature: "Great Vibes", cursive;
   --header-h: 100px;
   --header-h-mobile: 72px;
   --mobile-header-offset: var(--header-h-mobile);
@@ -90,13 +93,38 @@ ul { list-style: none; }
   gap: 1rem;
 }
 
+.header__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
 .header__logo img {
   width: 100px;
   height: auto;
   transition: width var(--transition);
 }
 
+.logo-signature {
+  font-family: var(--font-signature);
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.header__logo .logo-signature {
+  font-size: 1.05rem;
+  margin-top: -0.15rem;
+}
+
 .header--solid .header__logo img { width: 80px; }
+
+.header--solid .header__logo .logo-signature {
+  font-size: 0.95rem;
+}
 
 .header__toggle {
   display: none;
@@ -1045,7 +1073,12 @@ a.product-card { color: inherit; }
   align-items: start;
 }
 
-.footer__brand img { width: 180px; margin-bottom: 0.5rem; }
+.footer__brand img { width: 180px; margin-bottom: 0.15rem; }
+
+.footer__brand .logo-signature {
+  font-size: 1.5rem;
+  margin-bottom: 0.35rem;
+}
 .footer__tagline { color: var(--text-muted); font-size: 14px; }
 
 .footer__links h4 {
@@ -1166,8 +1199,19 @@ a.product-card { color: inherit; }
     width: 56px;
   }
 
+  .header__logo .logo-signature {
+    font-size: 0.72rem;
+    max-width: 7.5rem;
+    white-space: normal;
+    line-height: 1.05;
+  }
+
   .header--solid .header__logo img {
     width: 56px;
+  }
+
+  .header--solid .header__logo .logo-signature {
+    font-size: 0.72rem;
   }
 
   .header__toggle {
