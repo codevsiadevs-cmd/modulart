@@ -485,6 +485,10 @@ a.product-card { color: inherit; }
   object-fit: cover;
 }
 
+.product-hero__img--empty {
+  background: linear-gradient(135deg, #1a1510 0%, #2d2419 50%, #1a1510 100%);
+}
+
 .product-hero__overlay {
   position: absolute;
   inset: 0;

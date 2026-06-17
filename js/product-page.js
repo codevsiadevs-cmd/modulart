@@ -42,6 +42,14 @@
 
     var catalogHtml = renderCatalog(product.catalog);
     var catalogCount = product.catalog.length;
+    var countLabel = catalogCount === 1 ? '1 proyecto' : catalogCount + ' proyectos';
+    var catalogCountText = catalogCount
+      ? countLabel + ' · Haz clic en cualquier imagen para ver en detalle'
+      : 'Próximamente agregaremos fotos de proyectos en esta categoría.';
+
+    var heroImgHtml = product.heroImage
+      ? '<img class="product-hero__img" src="' + product.heroImage + '" alt="' + escapeHtml(product.heroAlt || product.title) + '" width="1600" height="500" fetchpriority="high" decoding="async">'
+      : '<div class="product-hero__img product-hero__img--empty" aria-hidden="true"></div>';
 
     var relatedHtml = window.MODULART_PRODUCT_ORDER
       .filter(function (slug) { return slug !== product.slug; })
@@ -55,7 +63,7 @@
 
     root.innerHTML =
       '<section class="product-hero">'
-      + '<img class="product-hero__img" src="' + product.heroImage + '" alt="' + escapeHtml(product.heroAlt) + '" width="1600" height="500" fetchpriority="high" decoding="async">'
+      + heroImgHtml
       + '<div class="product-hero__overlay"></div>'
       + '<div class="container product-hero__content">'
       + '<nav class="breadcrumb" aria-label="Ruta de navegación">'
@@ -78,7 +86,7 @@
       + '<div class="product-catalog__header">'
       + '<h2>Catálogo de trabajos</h2>'
       + '<div class="section__divider"></div>'
-      + '<p class="product-catalog__count">' + catalogCount + ' proyectos · Haz clic en cualquier imagen para ver en detalle</p>'
+      + '<p class="product-catalog__count">' + catalogCountText + '</p>'
       + '</div>'
       + '<div class="catalog-grid" id="catalog-grid">' + catalogHtml + '</div>'
       + '</div>'
