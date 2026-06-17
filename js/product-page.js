@@ -18,7 +18,7 @@
     return catalog.map(function (item, index) {
       return '<article class="catalog-card" data-index="' + index + '" tabindex="0" role="button" aria-label="Ver ' + escapeHtml(item.title) + '">'
         + '<div class="catalog-card__img-wrap">'
-        + '<img src="' + item.src + '" alt="' + escapeHtml(item.alt) + '" width="600" height="450" loading="lazy" decoding="async">'
+        + '<img src="' + item.src + '" alt="' + escapeHtml(item.alt) + '" width="1200" height="900" sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw" loading="lazy" decoding="async">'
         + '<div class="catalog-card__overlay">'
         + '<span class="catalog-card__view">Ver proyecto</span>'
         + '</div>'
@@ -48,7 +48,7 @@
       : 'Próximamente agregaremos fotos de proyectos en esta categoría.';
 
     var heroImgHtml = product.heroImage
-      ? '<img class="product-hero__img" src="' + product.heroImage + '" alt="' + escapeHtml(product.heroAlt || product.title) + '" width="1600" height="500" fetchpriority="high" decoding="async">'
+      ? '<img class="product-hero__img" src="' + product.heroImage + '" alt="' + escapeHtml(product.heroAlt || product.title) + '" width="2400" height="800" sizes="100vw" fetchpriority="high" decoding="async">'
       : '<div class="product-hero__img product-hero__img--empty" aria-hidden="true"></div>';
 
     var relatedHtml = window.MODULART_PRODUCT_ORDER

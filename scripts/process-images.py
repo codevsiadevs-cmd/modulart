@@ -87,9 +87,9 @@ STOCK_REJECTED = {
 }
 
 INBOX_CLASSIFICATION = {
-    "taller.jpg": {"category": "empresa", "slug": "taller-artesano-lijadora", "title": "Artesano trabajando madera en taller ModulArt", "hero": False, "primary": True, "also": "empresa/taller.jpg"},
+    "taller.jpg": {"category": "empresa", "slug": "taller-artesano-lijadora", "title": "Artesano trabajando madera en taller ModulArt", "hero": False, "primary": True},
     "taller2.jpg": {"category": "servicios", "slug": "fabricacion-cepillo-mano", "title": "Fabricación artesanal con cepillo de mano", "hero": False, "primary": True, "also": "servicios/fabricacion.jpg"},
-    "taller3.jpg": {"category": "empresa", "slug": "taller-maquinaria-industrial", "title": "Taller de ebanistería con maquinaria profesional", "hero": False, "primary": True, "also": "empresa/maquinaria.jpg"},
+    "taller3.jpg": {"category": "empresa", "slug": "taller-maquinaria-industrial", "title": "Taller de ebanistería con maquinaria profesional", "hero": False, "primary": True},
     "images.jpg": {"category": "closets", "slug": "closet-clasico-caoba-lacado", "title": "Closet clásico en madera caoba con cajones", "hero": False, "primary": True},
     "images (1).jpg": {"category": "closets", "slug": "closet-moderno-gris-corredizo", "title": "Closet moderno en melamina gris con puertas corredizas", "hero": False, "primary": True},
     "images (2).jpg": {"category": "banos", "slug": "repisas-madera-bano", "title": "Repisas de madera para baño", "hero": False, "primary": True, "preprocess": "crop_top_text"},
@@ -135,7 +135,7 @@ def enhance(img: Image.Image) -> Image.Image:
 
 def resize(img: Image.Image, is_hero: bool) -> Image.Image:
     w, h = img.size
-    max_edge = 1920 if is_hero else 1400
+    max_edge = 2400 if is_hero else 1920
     if max(w, h) <= max_edge:
         return img
     if w >= h:
@@ -404,12 +404,17 @@ HERO_SLIDE_ORDER = [
 ]
 
 
-def finalize_hero_slide(img: Image.Image, size: tuple[int, int] = (1600, 900)) -> Image.Image:
-    """Recorte 16:9 centrado y salida hero a resolución fija."""
+def finalize_hero_slide(img: Image.Image, size: tuple[int, int] = (2400, 1350)) -> Image.Image:
+    """Recorte 16:9 centrado; sube a 2400px solo si el origen lo permite."""
     hero = crop_hero_16_9(img.copy())
-    if hero.size != size:
-        hero = hero.resize(size, Image.Resampling.LANCZOS)
-    return hero
+    w, h = hero.size
+    tw, th = size
+    if w >= int(tw * 0.7):
+        if hero.size != size:
+            hero = hero.resize(size, Image.Resampling.LANCZOS)
+        return hero
+    scale = min(1.35, tw / w)
+    return hero.resize((int(w * scale), int(h * scale)), Image.Resampling.LANCZOS)
 
 
 def demote_retired_heroes(manifest: dict):
@@ -459,7 +464,7 @@ def process_hero_inbox(manifest: dict, used_slugs: dict[str, set[str]]):
 
         hero_img = finalize_hero_slide(img)
         hero_name = f"{slug}-hero.jpg"
-        save_jpg(hero_img, IMG / "hero" / hero_name, quality=93)
+        save_jpg(hero_img, IMG / "hero" / hero_name, quality=92)
 
         entry = {
             "id": slug,
