@@ -40,9 +40,46 @@
     var menuToggle = document.getElementById('menu-toggle');
     var mainNav = document.getElementById('main-nav');
     var navBackdrop = document.getElementById('nav-backdrop');
+    var header = document.getElementById('header');
     if (!menuToggle || !mainNav) return;
 
+    function isMobileNav() {
+      return window.matchMedia('(max-width: 992px)').matches;
+    }
+
+    function restoreNavInHeader() {
+      if (!header || !mainNav) return;
+      var inner = header.querySelector('.header__inner');
+      if (!inner || inner.contains(mainNav)) return;
+      if (menuToggle && menuToggle.parentNode === inner) {
+        menuToggle.insertAdjacentElement('afterend', mainNav);
+      } else {
+        inner.appendChild(mainNav);
+      }
+    }
+
+    function moveNavToBody() {
+      if (!mainNav || !isMobileNav()) return;
+      if (mainNav.parentNode !== document.body) {
+        document.body.appendChild(mainNav);
+      }
+    }
+
+    function syncMobileNavOffset() {
+      if (!header) return;
+      document.documentElement.style.setProperty(
+        '--mobile-header-offset',
+        header.getBoundingClientRect().height + 'px'
+      );
+    }
+
     function setMenuOpen(open) {
+      if (open && isMobileNav()) {
+        syncMobileNavOffset();
+        moveNavToBody();
+      } else {
+        restoreNavInHeader();
+      }
       mainNav.classList.toggle('header__nav--open', open);
       menuToggle.setAttribute('aria-expanded', open);
       document.body.classList.toggle('nav-open', open);
@@ -51,6 +88,17 @@
         navBackdrop.setAttribute('aria-hidden', open ? 'false' : 'true');
       }
     }
+
+    syncMobileNavOffset();
+    window.addEventListener('resize', function () {
+      syncMobileNavOffset();
+      if (!isMobileNav()) {
+        restoreNavInHeader();
+        if (mainNav.classList.contains('header__nav--open')) {
+          setMenuOpen(false);
+        }
+      }
+    }, { passive: true });
 
     menuToggle.addEventListener('click', function () {
       setMenuOpen(!mainNav.classList.contains('header__nav--open'));
