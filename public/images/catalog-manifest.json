@@ -889,8 +889,7 @@
       "primary": true,
       "hero": false,
       "width": 900,
-      "height": 675,
-      "source_type": "referencia"
+      "height": 675
     },
     {
       "id": "walk-in-closet-nogal-lujo",
@@ -903,8 +902,7 @@
       "primary": true,
       "hero": false,
       "width": 550,
-      "height": 413,
-      "source_type": "referencia"
+      "height": 413
     },
     {
       "id": "repisas-rusticas-bano-ganchos",
@@ -984,8 +982,7 @@
       "primary": true,
       "hero": false,
       "width": 1000,
-      "height": 1000,
-      "source_type": "referencia"
+      "height": 1000
     },
     {
       "id": "vanity-flotante-render-moderno",
@@ -1012,8 +1009,7 @@
       "primary": true,
       "hero": false,
       "width": 1400,
-      "height": 741,
-      "source_type": "referencia"
+      "height": 741
     },
     {
       "id": "lavanderia-closets-integrados-angulo",
@@ -1022,13 +1018,11 @@
       "slug": "lavanderia-closets-integrados-angulo",
       "filename": "lavanderia-closets-integrados-angulo.jpg",
       "path": "/public/images/closets/lavanderia-closets-integrados-angulo.jpg",
-      "title": "Lavandería con closets — ángulo alterno",
-      "primary": false,
+      "title": "Lavandería con closets integrados — vista lateral",
+      "primary": true,
       "hero": false,
       "width": 1400,
-      "height": 768,
-      "duplicate_of": "lavanderia-closets-integrados",
-      "source_type": "referencia"
+      "height": 768
     },
     {
       "id": "sala-cocina-techo-listones-terraza",

@@ -3,23 +3,58 @@ window.MODULART_PRODUCTS = {
     slug: 'closets',
     title: 'Closets',
     metaDescription: 'Catálogo de closets en madera a medida en Ciudad de Panamá. Proyectos realizados por ModulArt.',
-    heroImage: '/public/images/closets/closet-clasico-caoba-lacado.jpg',
-    heroAlt: 'Closet clásico en madera caoba con cajones',
+    heroImage: '/public/images/closets/armario-moderno-espejos-cajones.jpg',
+    heroAlt: 'Armario moderno con espejos y cajones',
     description: 'Explora nuestro catálogo de closets fabricados e instalados en hogares de Ciudad de Panamá. Cada proyecto se diseña a medida según el espacio, estilo y necesidades de almacenamiento del cliente.',
     catalog: [
       {
-        title: 'Closet clásico en madera caoba con cajones — Punta Pacífica',
-        description: 'Proyecto realizado por ModulArt en Punta Pacífica. Closet clásico en madera caoba con cajones.',
+        title: 'Armario moderno con espejos y cajones — Punta Pacífica',
+        description: 'Proyecto realizado por ModulArt en Punta Pacífica. Armario moderno con espejos y cajones.',
         material: 'Madera natural · Melamina premium',
+        src: '/public/images/closets/armario-moderno-espejos-cajones.jpg',
+        alt: 'Armario moderno con espejos y cajones'
+      },
+      {
+        title: 'Closet clásico en madera caoba con cajones — Costa del Este',
+        description: 'Proyecto realizado por ModulArt en Costa del Este. Closet clásico en madera caoba con cajones.',
+        material: 'Nogal · Herrajes soft-close',
         src: '/public/images/closets/closet-clasico-caoba-lacado.jpg',
         alt: 'Closet clásico en madera caoba con cajones'
       },
       {
-        title: 'Closet moderno en melamina gris con puertas corredizas — Costa del Este',
-        description: 'Proyecto realizado por ModulArt en Costa del Este. Closet moderno en melamina gris con puertas corredizas.',
-        material: 'Nogal · Herrajes soft-close',
+        title: 'Closet moderno en melamina gris con puertas corredizas — San Francisco',
+        description: 'Proyecto realizado por ModulArt en San Francisco. Closet moderno en melamina gris con puertas corredizas.',
+        material: 'Roble · Barniz satinado',
         src: '/public/images/closets/closet-moderno-gris-corredizo.jpg',
         alt: 'Closet moderno en melamina gris con puertas corredizas'
+      },
+      {
+        title: 'Muebles integrados para lavandería y almacenamiento — El Cangrejo',
+        description: 'Proyecto realizado por ModulArt en El Cangrejo. Muebles integrados para lavandería y almacenamiento.',
+        material: 'Cedro · Acabado mate',
+        src: '/public/images/closets/lavanderia-closets-integrados.jpg',
+        alt: 'Muebles integrados para lavandería y almacenamiento'
+      },
+      {
+        title: 'Lavandería con closets integrados — vista lateral — Clayton',
+        description: 'Proyecto realizado por ModulArt en Clayton. Lavandería con closets integrados — vista lateral.',
+        material: 'MDF lacado · Melamina texturada',
+        src: '/public/images/closets/lavanderia-closets-integrados-angulo.jpg',
+        alt: 'Lavandería con closets integrados — vista lateral'
+      },
+      {
+        title: 'Walk-in closet con iluminación LED integrada — Bella Vista',
+        description: 'Proyecto realizado por ModulArt en Bella Vista. Walk-in closet con iluminación LED integrada.',
+        material: 'Teca tratada · Herrajes premium',
+        src: '/public/images/closets/walk-in-closet-led-melamina.jpg',
+        alt: 'Walk-in closet con iluminación LED integrada'
+      },
+      {
+        title: 'Walk-in closet en nogal con cajones y repisas — Obarrio',
+        description: 'Proyecto realizado por ModulArt en Obarrio. Walk-in closet en nogal con cajones y repisas.',
+        material: 'Madera natural · Melamina premium',
+        src: '/public/images/closets/walk-in-closet-nogal-lujo.jpg',
+        alt: 'Walk-in closet en nogal con cajones y repisas'
       },
     ]
   },

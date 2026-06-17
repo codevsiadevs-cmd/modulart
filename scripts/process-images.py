@@ -98,17 +98,17 @@ INBOX_CLASSIFICATION = {
     "images (5).jpg": {"category": "comedores", "slug": "comedor-madera-mesa-maciza", "title": "Comedor con mesa maciza y piso de madera", "hero": False, "primary": True, "source_type": "referencia"},
     "images (6).jpg": {"category": "salas", "slug": "sala-piso-madera-mueble-tv", "title": "Sala con piso de madera y mueble de TV flotante", "hero": False, "primary": True, "source_type": "referencia"},
     "images (7).jpg": {"category": "cocinas-integrales", "slug": "cocina-moderna-piso-roble", "title": "Cocina moderna con piso de roble claro", "hero": False, "primary": True, "source_type": "referencia"},
-    "closets_de_melamina.jpg": {"category": "closets", "slug": "walk-in-closet-led-melamina", "title": "Walk-in closet con iluminación LED integrada", "hero": False, "primary": True, "source_type": "referencia"},
-    "7250.jpg": {"category": "closets", "slug": "walk-in-closet-nogal-lujo", "title": "Walk-in closet en nogal con cajones y repisas", "hero": False, "primary": True, "source_type": "referencia"},
+    "closets_de_melamina.jpg": {"category": "closets", "slug": "walk-in-closet-led-melamina", "title": "Walk-in closet con iluminación LED integrada", "hero": False, "primary": True},
+    "7250.jpg": {"category": "closets", "slug": "walk-in-closet-nogal-lujo", "title": "Walk-in closet en nogal con cajones y repisas", "hero": False, "primary": True},
     "sddefault.jpg": {"category": "banos", "slug": "repisas-rusticas-bano-ganchos", "title": "Repisas rústicas de madera para baño con ganchos", "hero": False, "primary": True, "preprocess": "crop_letterbox"},
     "Traditional-Engineered-Wood-Flooring.jpg": {"category": "pisos-escalas-pasamanos", "slug": "piso-madera-engineered-sala", "title": "Piso de madera engineered en sala contemporánea", "hero": False, "primary": True, "source_type": "referencia"},
     "20cc9872abfaaf56118737c0aadffa71.jpg": {"category": "alcobas", "slug": "alcoba-panel-madera-oscura-piso", "title": "Alcoba con panel de madera oscura y piso integrado", "hero": False, "primary": True, "source_type": "referencia"},
     "704_imagenMovil.png": {"category": "banos", "slug": "bano-moderno-repisas-vanity", "title": "Baño moderno con repisas y vanity en madera", "hero": False, "primary": True},
     "IMG_3492_ok_peq.avif": {"category": "banos", "slug": "bano-repisas-divisor-espejo", "title": "Baño con repisas divisoras y acabados premium", "hero": False, "primary": True},
-    "135054068-1.webp": {"category": "closets", "slug": "armario-moderno-espejos-cajones", "title": "Armario moderno con espejos y cajones", "hero": False, "primary": True, "source_type": "referencia"},
+    "135054068-1.webp": {"category": "closets", "slug": "armario-moderno-espejos-cajones", "title": "Armario moderno con espejos y cajones", "hero": False, "primary": True},
     "baño_recibidor_3.avif": {"category": "banos", "slug": "vanity-flotante-render-moderno", "title": "Vanity flotante de madera — diseño contemporáneo", "hero": False, "primary": False, "source_type": "render"},
-    "w=3840,q=75.webp": {"category": "closets", "slug": "lavanderia-closets-integrados", "title": "Muebles integrados para lavandería y almacenamiento", "hero": False, "primary": True, "source_type": "referencia"},
-    "w=3840,q=75 (1).webp": {"category": "closets", "slug": "lavanderia-closets-integrados-angulo", "title": "Lavandería con closets — ángulo alterno", "hero": False, "primary": False, "duplicate_of": "lavanderia-closets-integrados", "source_type": "referencia"},
+    "w=3840,q=75.webp": {"category": "closets", "slug": "lavanderia-closets-integrados", "title": "Muebles integrados para lavandería y almacenamiento", "hero": False, "primary": True},
+    "w=3840,q=75 (1).webp": {"category": "closets", "slug": "lavanderia-closets-integrados-angulo", "title": "Lavandería con closets integrados — vista lateral", "hero": False, "primary": True},
 }
 
 
